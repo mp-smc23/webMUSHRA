@@ -1,0 +1,143 @@
+testname: Pitch Shifting Test
+testId: pitch_shift
+bufferSize: 2048
+stopOnErrors: true
+showButtonPreviousPage: true
+remoteService: service/write.php
+
+pages:
+    - type: generic
+      id: first_page
+      name: Welcome
+      content: Welcome to the Audio Pitch Shifting Quality Assessment!<br><br>  This study is designed to take approximately <b>12 minutes </b>to complete. <br> It includes <b>a training session</b> to help you become familiar with the test format, followed by <b>7 test sessions</b> where you will assess the audio quality of pitch-shifted excerpts. <br>Additionally, you will be asked a few questions about your background to help contextualize the results.
+    - type: consent
+      id: consent_page
+      name: Consent
+      mustConsent: true
+      content: <p>You are participating in a listening test. For this, he answers you give to the following questions will be stored. The data collected during this experiment will be used solely for research purposes. No personal data that can be used to identify you will be collected. All responses will be stored anonymously. Your responses could be used either individually or aggregated across participants for reporting in a final project, and your responses will be deleted upon completion of the course. You may withdraw from the experiment at any time without needing to provide justification, however, please note that because responses are stored anonymously, you are not able to remove your responses from the collected dataset after you complete the experiment session and leave the experiment venue.  <br><b><br>Do you give consent for this?</p></b></p>
+    - type: mushra
+      id: training
+      name: Training Session - Mix +2
+      content: This a training session to familiarize you with the interface and rating process. <br><br> In this listening test you are asked to <b>rate each presented condition</b> on a scale from <b>0 to 100</b>, reflecting how well the stimuli meets your <b>personal expectations for a pitch-shifted version of the reference</b>, while also considering the <b>overall audio quality</b>.<br> You are not required to use the full scale, as there are no predefined ideal examples of the best or worst quality.
+      showWaveform: true
+      enableLooping: true 
+      reference: configs/resources/audio/soft_spot.wav
+      createAnchor35: false
+      createAnchor70: false
+      showConditionNames: false
+      stimuli:
+          EL: configs/resources/audio/el/ss+2.wav
+          WS: configs/resources/audio/ws/ss+2.wav
+          SS: configs/resources/audio/ss/ss+2.wav
+          PS: configs/resources/audio/ps/ss+2.wav
+          AN: configs/resources/audio/an/ss+2.wav
+    - 
+          - type: mushra
+            id: mix_min_12
+            name: Mix -12
+            content: Please rate each presented condition, reflecting how well the stimuli meets your personal expectations for a pitch-shifted version of the reference while also considering the overall audio quality. 
+            showWaveform: true
+            enableLooping: true 
+            reference: configs/resources/audio/soft_spot.wav
+            createAnchor35: false
+            createAnchor70: false
+            showConditionNames: false
+            randomize: true
+            stimuli:
+                EL: configs/resources/audio/el/ss-12.wav
+                WS: configs/resources/audio/ws/ss-12.wav
+                SS: configs/resources/audio/ss/ss-12.wav
+                PS: configs/resources/audio/ps/ss-12.wav
+                AN: configs/resources/audio/an/ss-12.wav     
+          - type: mushra
+            id: mix_plus_7
+            name: Mix +7
+            content: Please rate each presented condition, reflecting how well the stimuli meets your personal expectations for a pitch-shifted version of the reference while also considering the overall audio quality. 
+            showWaveform: true
+            enableLooping: true 
+            reference: configs/resources/audio/soft_spot.wav
+            createAnchor35: false
+            createAnchor70: false
+            showConditionNames: false
+            randomize: true
+            stimuli:
+                EL: configs/resources/audio/el/ss+7.wav
+                WS: configs/resources/audio/ws/ss+7.wav
+                SS: configs/resources/audio/ss/ss+7.wav
+                PS: configs/resources/audio/ps/ss+7.wav
+                AN: configs/resources/audio/an/ss+7.wav  
+          - type: mushra
+            id: mix_plus_12
+            name: Mix +12
+            content: Please rate each presented condition, reflecting how well the stimuli meets your personal expectations for a pitch-shifted version of the reference while also considering the overall audio quality. 
+            showWaveform: true
+            enableLooping: true 
+            reference: configs/resources/audio/soft_spot.wav
+            createAnchor35: false
+            createAnchor70: false
+            showConditionNames: false
+            randomize: true
+            stimuli:
+                EL: configs/resources/audio/el/ss+12.wav
+                WS: configs/resources/audio/ws/ss+12.wav
+                SS: configs/resources/audio/ss/ss+12.wav
+                PS: configs/resources/audio/ps/ss+12.wav
+                AN: configs/resources/audio/an/ss+12.wav 
+          - type: mushra
+            id: mix_round
+            name: Mix Round Trip
+            content: Please rate each presented condition, reflecting how well the stimuli meets your personal expectations for a pitch-shifted version of the reference while also considering the overall audio quality. 
+            showWaveform: true
+            enableLooping: true 
+            reference: configs/resources/audio/soft_spot.wav
+            createAnchor35: false
+            createAnchor70: false
+            showConditionNames: false
+            randomize: true
+            stimuli:
+                EL: configs/resources/audio/el/ss_round.wav
+                WS: configs/resources/audio/ws/ss_round.wav
+                SS: configs/resources/audio/ss/ss_round.wav
+                PS: configs/resources/audio/ps/ss_round.wav
+                AN: configs/resources/audio/an/ss_round.wav 
+          - type: mushra
+            id: drums_round
+            name: Drums Round Trip
+            content: Please rate each presented condition, reflecting how well the stimuli meets your personal expectations for a pitch-shifted version of the reference while also considering the overall audio quality. 
+            showWaveform: true
+            enableLooping: true 
+            reference: configs/resources/audio/drums.wav
+            createAnchor35: false
+            createAnchor70: false
+            showConditionNames: false
+            randomize: true
+            stimuli:
+                EL: configs/resources/audio/el/drums_round.wav
+                WS: configs/resources/audio/ws/drums_round.wav
+                SS: configs/resources/audio/ss/drums_round.wav
+                PS: configs/resources/audio/ps/drums_round.wav
+                AN: configs/resources/audio/an/drums_round.wav
+          - type: mushra
+            id: guitar_round
+            name: Guitar Round Trip Up
+            content: Please rate each presented condition, reflecting how well the stimuli meets your personal expectations for a pitch-shifted version of the reference while also considering the overall audio quality. 
+            showWaveform: true
+            enableLooping: true 
+            reference: configs/resources/audio/guitar.wav
+            createAnchor35: false
+            createAnchor70: false
+            showConditionNames: false
+            randomize: true
+            stimuli:
+                EL: configs/resources/audio/el/guitar_round.wav
+                WS: configs/resources/audio/ws/guitar_round.wav
+                SS: configs/resources/audio/ss/guitar_round.wav
+                PS: configs/resources/audio/ps/guitar_round.wav
+                AN: configs/resources/audio/an/guitar_round.wav 
+                
+    - type: finish
+      name: Thank you
+      content: Thank you for attending!
+      popupContent: Your results were sent.
+      showResults: false
+      writeResults: true
